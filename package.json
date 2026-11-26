@@ -1,0 +1,46 @@
+{
+  "name": "property-kings",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ملوك العقارات – Property Kings: لعبة تجارة عقارات أونلاين (Next.js + Phaser + Supabase)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "icons": "node scripts/generate-icons.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "next": "16.4.6",
+    "phaser": "4.2.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "@supabase/supabase-js": "^2.119.2",
+    "zod": "^4.6.7",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.3.1",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.20.0",
+    "eslint-config-next": "16.4.6",
+    "jsdom": "^31.0.1",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.2",
+    "@vitejs/plugin-react": "^5.0.0"
+  },
+  "engines": { "node": ">=20.9.0" }
+}
