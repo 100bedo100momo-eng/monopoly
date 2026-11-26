@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d1b18">
+<meta name="description" content="لعبة مونوبولي عربية أونلاين: تداول العقارات، ابنِ المنازل، واسحب بطاقات الفرصة وصندوق المجتمع.">
+<title>مونوبولي | لعبة العقارات</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🏠</span>
+      <div>
+        <h1>مونوبولي</h1>
+        <p>لعبة العقارات والتجارة</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="btn ghost" data-act="rules">طريقة اللعب</button>
+      <button class="btn ghost" data-act="new">لعبة جديدة</button>
+    </div>
+  </header>
+  <main class="layout">
+    <section class="board-area">
+      <div class="board" id="board" dir="ltr"></div>
+    </section>
+    <aside class="panel" id="panel"></aside>
+  </main>
+  <footer class="foot">صُنعت للعب على الهاتف والكمبيوتر · لا تحتاج إلى اتصال بعد التحميل</footer>
+</div>
+<div class="overlay hidden" id="overlay"></div>
+<script src="app.js"></script>
+</body>
+</html>
