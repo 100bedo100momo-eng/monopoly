@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #10294d;
+  --color-navy-700: #16355e;
+  --color-navy-600: #1d4073;
+  --color-gold: #f5c542;
+  --color-gold-soft: #f7d774;
+  --color-emerald-600: #0e7a5f;
+  --font-sans: "Cairo", "Tajawal", "Segoe UI", Tahoma, system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --text: #17233b;
+  --text-muted: #5b6a86;
+  --border: #d8e0ee;
+}
+
+html.dark {
+  --bg: #081120;
+  --surface: #10203a;
+  --text: #e8eefc;
+  --text-muted: #93a6c6;
+  --border: #22344f;
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+}
+
+.bg-surface {
+  background: var(--surface);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+.border-app {
+  border-color: var(--border);
+}
+
+/* لوحة اللوحة والبطاقات */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+input, select, textarea {
+  color: var(--text);
+  background: color-mix(in srgb, var(--surface) 92%, black 8%);
+  border-color: var(--border);
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

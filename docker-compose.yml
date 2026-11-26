@@ -1,0 +1,18 @@
+# تشغيل اختياري للواجهة عبر Docker.
+# الباك إند (Supabase) يعمل إما عبر Supabase Cloud المجاني أو عبر Supabase CLI:
+#   npx supabase start && npx supabase db push
+# ثم مرّر المتغيرات أدناه إلى الحاوية.
+services:
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    command: sh -c "npm ci && npm run build && npm run start"
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      NODE_ENV: production
+    volumes:
+      - .:/app
+    restart: unless-stopped
